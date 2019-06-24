@@ -9,3 +9,5 @@ This repo is a set of my personal notes for brilliant blog by Tom Harding.
 2. Fantas, Eel, and Specification 1: Daggy
     - [Blog](http://www.tomharding.me/2017/03/03/fantas-eel-and-specification/)
     - [Notes](./daggy.js)
+3. Fantas, Eel, and Specification 2: Type Signatures
+    - [Blog](http://www.tomharding.me/2017/03/08/fantas-eel-and-specification-2/)
