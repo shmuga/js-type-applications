@@ -4,7 +4,15 @@ import { logWith } from './utils.js'
 const { tagged, taggedSum } = daggy
 const log = logWith(v => eval(v))
 
-const List = taggedSum('List', {
+//- A coordinate in 3D space.
+//+ Coord :: (Int, Int, Int) -> Coord
+export const Coord = tagged('Coord', ['x', 'y', 'z'])
+
+//- A line between two coordinates.
+//+ Line :: (Coord, Coord) -> Line
+export const Line = tagged('Line', ['from', 'to'])
+
+export const List = taggedSum('List', {
     Cons: ['head', 'tail'],
     Nil: []
 })
