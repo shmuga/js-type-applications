@@ -34,6 +34,13 @@ List.prototype.toArray = function() {
     })
 }
 
+List.prototype.length = function() {
+    return this.cata({
+        Cons: (head, tail) => 1 + tail.length(),
+        Nil: () => 0
+    })
+}
+
 List.prototype.map = function(f) {
     return this.cata({
         Cons: (x, acc) => List.Cons(f(x), acc.map(f)),

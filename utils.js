@@ -1,8 +1,9 @@
-const compose = (f, g) => x => f(g(x));
+const compose = (f, g) => x => f(g(x))
+
+export const delimiter = () => console.log('--------------------\n')
 
 const _logWith = withStringify => preProcess => f => {
-    console.log('--------------------')
-    console.log('\n')
+    delimiter()
     console.log(`${f} =`, withStringify
         ? JSON.stringify(preProcess(f))
         : preProcess(f)

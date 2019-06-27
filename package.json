@@ -5,11 +5,22 @@
   "description": "",
   "main": "utils.js",
   "scripts": {
+    "lint": "eslint .",
+    "fix": "eslint --fix .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
     "daggy": "^1.4.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run fix"
+    }
+  },
+  "devDependencies": {
+    "eslint": "^6.0.1",
+    "husky": "^2.7.0"
   }
 }

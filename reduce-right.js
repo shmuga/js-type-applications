@@ -19,7 +19,7 @@
  * the number! Still, we can think of that as not being a list function because
  * it’s not a function on a list - it’s just a function that returns a list**.
  */
-import { logWithStringify } from './utils.js';
+import { logWithStringify } from './utils.js'
 
 const log = logWithStringify(v => eval(v))
 
@@ -36,7 +36,7 @@ const filter = (p, xs) => xs.reduceRight(
     []
 )
 
-const length = (xs) => xs.reduceRight(n => n + 1, 0);
+const length = (xs) => xs.reduceRight(n => n + 1, 0)
 
 log('length([1,2,3,4,5])')
 
@@ -53,7 +53,7 @@ const reduce = (f, acc, xs) =>
         x => x
     )(acc)
 
-const reduceRight = (f, acc, xs) => xs.reduceRight(f, acc);
+const reduceRight = (f, acc, xs) => xs.reduceRight(f, acc)
 
 /**
  *  [1,2,3,4].reduceRight(

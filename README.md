@@ -11,3 +11,4 @@ This repo is a set of my personal notes for brilliant blog by Tom Harding.
     - [Notes](./daggy.js)
 3. Fantas, Eel, and Specification 2: Type Signatures
     - [Blog](http://www.tomharding.me/2017/03/08/fantas-eel-and-specification-2/)
+    - [Notes](./setoid.js)
