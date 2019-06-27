@@ -1,8 +1,23 @@
-import daggy from 'daggy'
-import { List } from './daggy.js'
+import { List } from './modules/index.js'
 import { delimiter, logWith } from './utils.js'
-const { tagged, taggedSum } = daggy
 const log = logWith(v => eval(v))
+
+log(`List.from([1,2,3]).equals(List.from([1,2,3]))`)
+log(`List.from([1,2,3]).notEquals(List.from([1,2,3,4]))`)
+
+/**
+ * A setoid is any type with a notion of equivalence.
+ * You already use plenty of setoids (integers, booleans, strings) almost
+ * every time you use the == operator, so this shouldn’t be too tricky. You
+ * also use things that aren’t setoids, like functions.
+ *
+ * equals :: Setoid a => a ~> a -> Boolean
+ *
+ * All the Fantasy Land structures come with laws that must be obeyed for the
+ * instance to be valid, and Setoid is no exception. In order to make sure your
+ * type behaves itself when used with other libraries and algorithms, there are
+ * just three things we have to remember. In all cases:
+ */
 
 // checkSetoidLaws :: Setoid a => a -> a -> Bool
 export function checkSetoidLaws(a, b, c) {
@@ -26,36 +41,6 @@ export function checkSetoidLaws(a, b, c) {
     console.log('---------------------------------------------------------------\n')
 }
 
-// Check the lists' heads, then their tails
-// equals :: Setoid a => List a ~> List a -> Bool
-List.prototype.equals = function(that) {
-    if (this.length() !== that.length()) {
-        return  false
-    }
-
-    return this.cata({
-        Cons: (head, tail) =>
-            head === that.head
-            && tail.equals(that.tail),
-        Nil: () => List.is(List.Nil)
-    })
-}
-
-List.prototype.notEquals = function(that) {
-    return !this.equals(that)
-}
-
-Array.prototype.equals = function(that) {
-    return this.every((el, key) => that[key] === el)
-}
-
-Boolean.prototype.equals = function(that) {
-    return this === that
-}
-
-log(`List.from([1,2,3]).equals(List.from([1,2,3]))`)
-log(`List.from([1,2,3]).notEquals(List.from([1,2,3,4]))`)
-
 checkSetoidLaws(List.from([1,2,3]), List.from([1,2,3]), List.from([1,2,3]))
 checkSetoidLaws([1,2,3], [1,2,3], [1,2,3])
 checkSetoidLaws(true, true, true)
@@ -67,10 +52,5 @@ function isPalindrome(list) {
         (acc, x) => acc.append(x)
     ).equals(list)
 }
-
-
-export const Set = taggedSum('Set', {
-
-})
 
 log(`isPalindrome(List.from([1,2,3,2,1]))`)

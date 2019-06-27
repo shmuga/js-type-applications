@@ -12,7 +12,8 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "daggy": "^1.4.0"
+    "daggy": "^1.4.0",
+    "ramda": "^0.26.1"
   },
   "husky": {
     "hooks": {

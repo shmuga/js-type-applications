@@ -3,12 +3,18 @@
 This repo is a set of my personal notes for brilliant blog by Tom Harding.
 
 ## Table of Contents
-1. Reductio and Abstract 'em _aka_ `reduceRight` rules the world.
+- Reductio and Abstract 'em _aka_ `reduceRight` rules the world.
     - [Blog](http://www.tomharding.me/2017/02/24/reductio-and-abstract-em/)
     - [Notes](./reduce-right.js)
-2. Fantas, Eel, and Specification 1: Daggy
+- Fantas, Eel, and Specification 1: Daggy
     - [Blog](http://www.tomharding.me/2017/03/03/fantas-eel-and-specification/)
     - [Notes](./daggy.js)
-3. Fantas, Eel, and Specification 2: Type Signatures
+- Fantas, Eel, and Specification 2: Type Signatures
     - [Blog](http://www.tomharding.me/2017/03/08/fantas-eel-and-specification-2/)
-    - [Notes](./setoid.js)
+    - [Notes](./types-signatures)
+- Fantas, Eel, and Specification 3: Setoid
+    - [Blog](http://www.tomharding.me/2017/03/09/fantas-eel-and-specification-3/)
+    - [Notes](./setoid.js) 
+- Fantas, Eel, and Specification 3.5: Ord
+    - [Blog](http://www.tomharding.me/2017/04/09/fantas-eel-and-specification-3.5/)
+    - [Notes](./ord.js)
