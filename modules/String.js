@@ -8,4 +8,8 @@ String.prototype.lte = function(that) {
     return this.length <= that.length
 }
 
+String.empty = function() {
+    return ''
+}
+
 applyAllOrdFunctions(String)

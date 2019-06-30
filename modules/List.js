@@ -145,4 +145,8 @@ List.prototype.lte = function(that) {
     })
 }
 
+List.empty = function() {
+    return List.Nil
+}
+
 applyAllOrdFunctions(List)

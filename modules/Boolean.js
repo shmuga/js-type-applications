@@ -18,8 +18,16 @@ Any.prototype.concat = function(that) {
     return Any(this.val || that.val)
 }
 
+Any.empty = function() {
+    return Any(false)
+}
+
 export const All = daggy.tagged('All', ['val'])
 
 All.prototype.concat = function(that) {
     return All(this.val && that.val)
+}
+
+All.empty = function() {
+    return All(true)
 }

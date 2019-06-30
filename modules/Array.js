@@ -8,4 +8,8 @@ Array.prototype.lte = function(that) {
     return this.every((el, key) => el <= that[key])
 }
 
+Array.empty = function() {
+    return []
+}
+
 applyAllOrdFunctions(Array)

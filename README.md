@@ -21,4 +21,7 @@ This repo is a set of my personal notes for brilliant blog by Tom Harding.
 - Fantas, Eel, and Specification 4: Semigroup
     - [Blog](http://www.tomharding.me/2017/03/13/fantas-eel-and-specification-4/)
     - [Notes](./semigroup.js)
+- Fantas, Eel, and Specification 5: Monoid 
+    - [Blog](http://www.tomharding.me/2017/03/21/fantas-eel-and-specification-5/)
+    - [Notes](./monoid.js)
     
