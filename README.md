@@ -18,3 +18,7 @@ This repo is a set of my personal notes for brilliant blog by Tom Harding.
 - Fantas, Eel, and Specification 3.5: Ord
     - [Blog](http://www.tomharding.me/2017/04/09/fantas-eel-and-specification-3.5/)
     - [Notes](./ord.js)
+- Fantas, Eel, and Specification 4: Semigroup
+    - [Blog](http://www.tomharding.me/2017/03/13/fantas-eel-and-specification-4/)
+    - [Notes](./semigroup.js)
+    

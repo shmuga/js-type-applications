@@ -1,3 +1,8 @@
+export const alphabet = Array(25).fill(0).reduce(
+    (acc, x, indx) => acc.concat([String.fromCharCode(acc.charCodeAt(indx) + 1)]),
+    'a'
+)
+
 const compose = (f, g) => x => f(g(x))
 
 export const delimiter = () => console.log('--------------------\n')
