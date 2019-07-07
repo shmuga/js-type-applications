@@ -12,4 +12,8 @@ Array.empty = function() {
     return []
 }
 
+Array.from = function(val) {
+    return [val]
+}
+
 applyAllOrdFunctions(Array)
