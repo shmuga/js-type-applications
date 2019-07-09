@@ -27,3 +27,7 @@ This repo is a set of my personal notes for brilliant blog by Tom Harding.
 - Fantas, Eel, and Specification 6: Functor
     - [Blog](http://www.tomharding.me/2017/03/27/fantas-eel-and-specification-6/)
     - [Notes](./functor.js)
+- Fantas, Eel, and Specification 7: Contravariant
+    - [Blog](http://www.tomharding.me/2017/04/03/fantas-eel-and-specification-7/)
+    - [Notes](./contramap)
+    - [Talk*](https://www.youtube.com/watch?v=IJ_bVVsQhvc)
