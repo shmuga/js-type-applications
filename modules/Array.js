@@ -16,4 +16,10 @@ Array.from = function(val) {
     return [val]
 }
 
+Array.prototype.ap = function (fs) {
+    return [].concat(... fs.map(
+        f => this.map(f)
+    ))
+}
+
 applyAllOrdFunctions(Array)

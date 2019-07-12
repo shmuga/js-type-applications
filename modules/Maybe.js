@@ -8,6 +8,8 @@ export const Maybe = taggedSum('Maybe', {
     Nothing: []
 })
 
+export const { Just, Nothing } = Maybe
+
 Maybe.from = function(val) {
     if (val === undefined
         || val === null
@@ -42,5 +44,15 @@ Maybe.prototype.fold = function(d, f) {
     return this.cata({
         Just: (x) => f(x),
         Nothing: () => d
+    })
+}
+
+Maybe.prototype.ap = function(fab) {
+    return this.cata({
+        Just: (a) => fab.cata({
+            Just: (ab) => Maybe.Just(ab(a)),
+            Nothing: () => a,
+        }),
+        Nothing: () => Maybe.Nothing
     })
 }
