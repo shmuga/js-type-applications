@@ -56,3 +56,7 @@ Maybe.prototype.ap = function(fab) {
         Nothing: () => Maybe.Nothing
     })
 }
+
+Maybe.of = function(x) {
+    return Just(x)
+}

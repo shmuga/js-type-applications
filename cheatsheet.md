@@ -69,6 +69,17 @@ __Laws__
 1. [Identity](#identity)
 2. [Composition](#composition)
 
+## <a id="applicative">Applicative</a>
+__Prototype__ 
+[[Apply](#apply)] +  
+
+`of :: Applicative f => a -> f a`
+
+__Laws__
+1. [Identity](#identity)
+2. [Homomorphism](#homomorphism)
+3. [Interchange](#interchange)
+
 ## Laws 
 __<a id="reflexivity">Reflexivity</a>__
 
@@ -101,3 +112,11 @@ __<a id="identity">Identity</a>__
 __<a id="composition">Composition</a>__
 
 `u.f(f').f(g') === u.f(x => g'(f'(x)))`
+
+__<a id="homomorphism">Homomorphism</a>__ 
+
+`A.f(x).g(A.f(u)) === A.f(u(x))`
+
+__<a id="interchange">Interchange</a>__
+
+`A.f(y).g(u) === u.g(A.f(f' => f'(y)))`

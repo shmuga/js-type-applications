@@ -15,3 +15,7 @@ Identity.prototype.map = function (f) {
 Identity.prototype.ap = function (b) {
     return new Identity(b.x(this.x))
 }
+
+Identity.ap = function(x) {
+    return new Identity(x)
+}

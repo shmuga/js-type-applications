@@ -22,4 +22,8 @@ Array.prototype.ap = function (fs) {
     ))
 }
 
+Array.of = function(x) {
+    return [x]
+}
+
 applyAllOrdFunctions(Array)
